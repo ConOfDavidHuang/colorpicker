@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html class="<{$platform_class_type|escape}>" lang="zh-lang">
+<head>
+<title>ÑÕÉ«Ñ¡È¡</title>
+<script type="text/javascript" src="./static/public/js/jquery1.10.2.js"></script>
+<script type="text/javascript" src="./static/public/js/jquery-migrate1.2.1.js"></script>
+
+<style>
+.farbtastic {
+  position: relative;
+}
+.farbtastic * {
+  position: absolute;
+  cursor: crosshair;
+}
+.farbtastic, .farbtastic .wheel {
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .color, .farbtastic .overlay {
+  top: 47px;
+  left: 47px;
+  width: 101px;
+  height: 101px;
+}
+.farbtastic .wheel {
+  background: url(./static/public/img/colorpicker/wheel.png) no-repeat;
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .overlay {
+  background: url(./static/public/img/colorpicker/mask.png) no-repeat;
+}
+.farbtastic .marker {
+  width: 17px;
+  height: 17px;
+  margin: -8px 0 0 -8px;
+  overflow: hidden; 
+  background: url(./static/public/img/colorpicker/marker.png) no-repeat;
+}
+</style>
+</head>
+<body>
+	<div class="form-item">
+	    <input type="text" id="color" value="#1b2bc5" />
+	</div>
+	<div id="picker"></div>
+
+<!--footer end-->
+<script type="text/javascript" src="./static/public/js/colorpicker.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#picker').farbtastic('#color');
+    $('#picker2').farbtastic('#color2');
+  });
+</script>
+
+</body>
+</html>
